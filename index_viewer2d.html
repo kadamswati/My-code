@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>2D-TestApp</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' />
+    <link type='text/css' rel='stylesheet' href='/style.css' />
+</head>
+
+<body>
+    <div class='split left'>
+        <div id='fileInput'>
+            <input type='button' id='get_file_for_first_viewer' value='File for First Viewer'></br>
+            <input type='file' id='my_file_for_first_viewer' multiple='multiple' accept='.svg'>
+            <input type='button' id='get_file_for_second_viewer' value='File for Second Viewer'></br>
+            <input type='file' id='my_file_for_second_viewer' multiple='multiple' accept='.svg'>
+        </div>
+        <br>
+        <div class='btn btn-success'>
+            <button type='button' id='addFirst2DViewerInstance_btn'>Add First 2D Viewer and Register Events</button>
+            <button type='button' id='addSecond2DViewerInstance_btn'>Add Second 2D Viewer and Register
+                Events</button></br>
+            <button type="button" id='removeFirst2DViewerInstance_btn'
+                style="background-color: #080; color: white;">Remove First
+                2D Viewer Instance</button>
+            <button type="button" id='removeSecond2DViewerInstance_btn'
+                style="background-color: #080; color: white;">Remove Second
+                2D Viewer Instance</button></br></br>
+            <button type='button' id='multiselection_btn'>Multi Selection</button>
+            <button type='button' id='highlightElement_btn'>Highlight Element</button>
+            <button type='button' id='clearSelection_btn'>Clear Selection</button>
+            <button type='button' id='clearHighlighted_btn'>Clear Highlighted</button></br></br>
+            <button type='button' id='getSelected_btn'>Get Selected</button></br></br>
+            <button type='button' id='colorElements_btn'>Color Elements</button>
+            <button type='button' id='showElements_btn'>Show Elements</button>
+            <button type='button' id='isolateElements_btn'>Isolate Elements</button>
+            <button type='button' id='opacityElements_btn'>Opacity Elements</button>
+            <button type='button' id='labelElements_btn'>Label Elements</button>
+            <button type='button' id='removeLabels_btn'>Remove Labels</button>
+            <button type='button' id='lockElements_btn'>Lock Elements</button>
+            <button type='button' id='resetElement_btn'>Reset Elements</button>
+            <button type='button' id='resetAllColors_btn'>Reset All Colors</button>
+            <button type='button' id='showAll_btn'>Show All</button>
+            <button type='button' id='resetAll_btn'>Reset All</button>
+            <button type='button' id='clearAll_btn'>Clear All</button>
+            <button type='button' id='removeDrawing_btn'>Remove Drawing</button>
+            <button type='button' id='zoomElements_btn'>Zoom Elements</button></br></br>
+            <button type='button' id='zoomExtent_btn'>Zoom Extent</button></br></br>
+            <button type='button' id='selectElements_btn'>Select Elements</button>
+            <button type='button' id='highlightedElement_btn'>Highlight Element</button>
+            <button type='button' id='translateDrawing_btn'>Translate Drawing</button>
+            <button type='button' id='rotateDrawing_btn'>Rotate Drawing</button>
+            <button type='button' id='scaleDrawing_btn'>Scale Drawing</button>
+            <!-- <button type='button' id='testAPI_btn'>Test API</button> -->
+        </div>
+    </div>
+    <div class='split right'>
+        <div id='canvas'></div>
+        <div id='canvas1'></div>
+        <div id='labels'> </div>
+    </div>
+    <script type='module' src='/index_viewer2d.js'></script>
+</body>
+
+</html>

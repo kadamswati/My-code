@@ -1,0 +1,94 @@
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+    width: 10%;
+    overflow: auto;
+}
+
+.right {
+    right: 0;
+    width: 90%;
+    display: flex;
+}
+
+#canvas {
+    left: 0;
+    height: 100%;
+    width: 50%;
+}
+
+#canvas1 {
+    right: 0;
+    height: 100%;
+    width: 50%;
+}
+
+#get_file_for_first_viewer,
+#chooseFile_btn,
+#choose3dmFile_btn {
+    background: green;
+    width: 95%;
+    table-layout: fixed;
+    /* margin: 5px; */
+    border-radius: 6px;
+    color: white;
+    padding: 1px;
+}
+
+#my_file_for_first_viewer {
+    display: none;
+}
+
+#get_file_for_second_viewer,
+#chooseFile_btn,
+#choose3dmFile_btn {
+    background: green;
+    width: 95%;
+    table-layout: fixed;
+    /* margin: 5px; */
+    border-radius: 6px;
+    color: white;
+    padding: 1px;
+}
+
+#my_file_for_second_viewer {
+    display: none;
+}
+
+g>svg {
+    overflow: visible;
+}
+
+#labels {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: arial;
+}
+
+#labels>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-width: 1px;
+    border: 3px #000;
+    border-style: ridge;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #add8e6;
+}
