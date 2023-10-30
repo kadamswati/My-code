@@ -1,94 +1,104 @@
 body {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .split {
-    height: 100%;
-    position: fixed;
-    z-index: 1;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 .left {
-    left: 0;
-    width: 10%;
-    overflow: auto;
+  left: 0;
+  width: 10%;
+  overflow-y: auto;
+}
+
+#get_file,
+#chooseFile_btn,
+#choose3dmFile_btn {
+  background: green;
+  width: 95%;
+  table-layout: fixed;
+  /* margin: 5px; */
+  border-radius: 6px;
+  color: white;
+  padding: 1px;
+}
+
+#my_file {
+  display: none;
+}
+
+#rh3dm_file {
+  display: none;
 }
 
 .right {
-    right: 0;
-    width: 90%;
-    display: flex;
+  /* position: absolute; */
+  left: 10%;
+  height: 100%;
+  width: 90%;
+  display: flex;
 }
 
 #canvas {
-    left: 0;
-    height: 100%;
-    width: 50%;
+  left: 0;
+  right: 50.1;
+  height: 100%;
+  width: 50%;
 }
 
 #canvas1 {
-    right: 0;
-    height: 100%;
-    width: 50%;
+  right: 0;
+  left: 50.1;
+  height: 100%;
+  width: 50%;
 }
 
-#get_file_for_first_viewer,
+#get_file,
 #chooseFile_btn,
 #choose3dmFile_btn {
-    background: green;
-    width: 95%;
-    table-layout: fixed;
-    /* margin: 5px; */
-    border-radius: 6px;
-    color: white;
-    padding: 1px;
+  background: green;
+  width: 95%;
+  table-layout: fixed;
+  /* margin: 5px; */
+  border-radius: 6px;
+  color: white;
+  padding: 1px;
 }
 
-#my_file_for_first_viewer {
-    display: none;
-}
-
-#get_file_for_second_viewer,
-#chooseFile_btn,
-#choose3dmFile_btn {
-    background: green;
-    width: 95%;
-    table-layout: fixed;
-    /* margin: 5px; */
-    border-radius: 6px;
-    color: white;
-    padding: 1px;
-}
-
-#my_file_for_second_viewer {
-    display: none;
-}
-
-g>svg {
-    overflow: visible;
+#my_file {
+  display: none;
 }
 
 #labels {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-family: arial;
+  position: absolute;
+  /* let us position ourself inside the container */
+  left: 0;
+  /* make our position the top left of the container */
+  top: 0;
+  font-family: arial;
 }
 
 #labels>div {
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    font-size: 20px;
-    user-select: none;
-    border-width: 1px;
-    border: 3px #000;
-    border-style: ridge;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: #add8e6;
+  position: absolute;
+  /* let us position them inside the container */
+  left: 0;
+  /* make their default position the top left of the container */
+  top: 0;
+  cursor: pointer;
+  /* change the cursor to a hand when over us */
+  font-size: 20px;
+  user-select: none;
+  /* don't let the text get selected */
+  border-width: 1px;
+  border: 3px #000;
+  border-style: ridge;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #add8e6;
 }

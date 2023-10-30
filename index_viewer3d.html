@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>3D-TestApp</title>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' />
+  <link type='text/css' rel='stylesheet' href='./style.css' />
+  <script type='importmap'>
+      {
+        "imports": {
+          "three": "/node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
+
+  <!-- importing rhino 3dm -->
+  <script src='https://cdn.jsdelivr.net/npm/rhino3dm@7.14.0/rhino3dm.js'></script>
+</head>
+
+<body>
+  <div class='split left'>
+    <div id='fileInput'>
+      <input type='button' id='get_file' value='Choose File'></br>
+      <input type='file' id='my_file' multiple='multiple' accept='.gltf, .glb, .3dm, .obj, .mtl'>
+    </div>
+    <br>
+    <div class='btn btn-success'>
+      <button type='button' id='multiselection_btn'>Multi Selection</button>
+      <button type='button' id='highlightElement_btn'>Highlight Element</button></br></br>
+      <button type='button' id='getSelected_btn'>Get Selected</button>
+      <button type='button' id='clearSelection_btn'>Clear Selection</button></br></br>
+      <button type='button' id='colorElements_btn'>Color Elements</button>
+      <button type='button' id='showElements_btn'>Show Elements</button>
+      <button type='button' id='isolateElements_btn'>Isolate Elements</button>
+      <button type='button' id='opacityElements_btn'>Opacity Elements</button>
+      <button type='button' id='labelElements_btn'>Label Elements</button>
+      <button type='button' id='removeLabels_btn'>Remove Labels</button>
+      <button type='button' id='lockElements_btn'>Lock Elements</button>
+      <button type='button' id='resetElement_btn'>Reset Elements</button>
+      <button type='button' id='resetColor_btn'>Reset Color</button>
+      <button type='button' id='resetAllColors_btn'>Reset All Colors</button>
+      <button type='button' id='showAll_btn'>Show All</button>
+      <button type='button' id='zoomElements_btn'>Zoom Elements</button>
+      <button type='button' id='zoomExtents_btn'>Zoom Extent</button>
+      <button type='button' id='selectElements_btn'>Select Elements</button>
+      <button type='button' id='highlightedElement_btn'>Highlight Element</button>
+      <button type='button' id='clearHighlightedElements_btn'>Clear Highlighted Element</button></br></br>
+      <button type='button' id='updateElevation'>updateElevation</button>
+      <button type='button' id='updateAzimuth'>updateAzimuth</button>
+      <button type='button' id='setSceneGround_btn'>Add Ground</button>
+      <button type='button' id='groundLevel_btn'>Ground Level</button>
+      <button type='button' id='setSceneFog_btn'>Add Fog</button>
+      <button type='button' id='setSceneIllumination_btn'>Add Illumination Light</button>
+      <button type='button' id='updateSkybox_btn'>Update Skybox</button>
+      <button type='button' id='clearByName_btn'>Clear By Name</button>
+      <button type='button' id='clearAll_btn'>Clear All</button>
+      <button type='button' id='translateModel_btn'>Translate Model</button>
+      <button type='button' id='rotateModel_btn'>Rotate Model</button>
+      <button type='button' id='scaleModel_btn'>Scale Model</button>
+      <button type='button' id='clipModel_btn'>Clip Model</button></br>
+      <label>Clipping slider :<input type='range' id='slider' name='slider' step='any' min='0' max='0.5'
+          value='0.1'></label></br>
+      <button type='button' id='switchEdgeGeom'>switchEdgeGeometry</button></br></br>
+      <button type='button' id='addSSAOPass'>Add SSAOPass</button></br>
+      <!-- <button type='button' id='updateSSAOPass'>Update SSAO Pass</button></br> -->
+      <label>Kernel Radius :<input type='range' id='kernelRadius' name='kernelRadius' step='100' min='500' max='50000'
+          value='600'></label></br>
+      <label>Max Distance :<input type='range' id='maxDistance' name='maxDistance' step='0.1' min='0.1' max='1'
+          value='0.3'></label></br>
+      <label>Min Distance :<input type='range' id='minDistance' name='minDistance' step='0.001' min='0.005' max='0.5'
+          value='0.002'></label></br>
+      <button type='button' id='removeSSAOPass'>Remove SSAO Pass</button>
+      <!-- <button type='button' id='updateSAOPass'>Update SAO Pass</button> -->
+      <button type='button' id='testAPI'>Test API</button>
+    </div>
+  </div>
+
+  <div class='split right'>
+    <div id='canvas'></div>
+    <div id='canvas1'></div>
+    <div id='labels'></div>
+  </div>
+  <script type='module' src='./index_viewer3d.js'></script>
+</body>
+
+</html>
